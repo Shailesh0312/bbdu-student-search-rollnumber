@@ -34,6 +34,14 @@ function searchStudent() {
         return;
     }
 
+    const formattedDate = new Date(student.examDate).toLocaleDateString(
+    "en-GB",
+    {
+        day: "numeric",
+        month: "long",
+        year: "numeric"
+    }
+);
     document.getElementById("result").innerHTML = `
         <h2>${student.studentName}</h2>
 
@@ -49,7 +57,7 @@ function searchStudent() {
 
         <p><b>Seat:</b> ${student.seatPosition}</p>
 
-        <p><b>Date:</b> ${student.examDate}</p>
+        <p><b>Date:</b> ${formattedDate}</p>
 
         <p><b>Shift:</b> ${student.shift}</p>
     `;
