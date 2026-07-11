@@ -39,8 +39,6 @@ function searchStudent() {
 
         <p><b>Roll No:</b> ${student.rollNo}</p>
 
-        <p><b>Paper ID:</b> ${student.paperId}</p>
-
         <p><b>Paper Code:</b> ${student.paperCode}</p>
 
         <p><b>Building:</b> ${student.building}</p>
