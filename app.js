@@ -1,6 +1,6 @@
 let students = [];
 
-fetch("PublishedStudentVSD.json")
+fetch("verified_seating_2026_05_11_morning.json")
     .then(response => response.json())
     .then(data => {
 
