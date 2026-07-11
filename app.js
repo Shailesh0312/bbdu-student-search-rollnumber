@@ -43,7 +43,9 @@ function searchStudent() {
 
         <p><b>Building:</b> ${student.building}</p>
 
-        <p><b>Room:</b> ${student.roomNo}</p>
+        <div class="room-number">
+    Room No. ${student.roomNo}
+</div>
 
         <p><b>Seat:</b> ${student.seatPosition}</p>
 
