@@ -1,9 +1,7 @@
 body{
-    font-family: Arial, sans-serif;
-    text-align:center;
-    margin-top:80px;
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
 }
-
 input{
     width:300px;
     padding:12px;
