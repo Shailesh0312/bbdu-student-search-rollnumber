@@ -44,13 +44,11 @@ function searchStudent() {
     if (roll === "") {
 
         document.getElementById("result").innerHTML =
-            "<h2 style='color:red'>Please enter a Roll Number.</h2>";
+            "<h2 style='color:red;text-align:center;'>Please enter your University Roll Number.</h2>";
 
         return;
 
     }
-
-    console.log("Searching:", roll);
 
     const student = students.find(
         s => String(s.rollNo).trim() === roll
@@ -59,7 +57,10 @@ function searchStudent() {
     if (!student) {
 
         document.getElementById("result").innerHTML =
-            "<h2 style='color:red'>Student Not Found</h2>";
+            `<h2 style="color:red;text-align:center;">
+                No seating record found.<br><br>
+                Please verify your University Roll Number.
+            </h2>`;
 
         return;
 
@@ -75,23 +76,53 @@ function searchStudent() {
     );
 
     document.getElementById("result").innerHTML = `
-        <h2>${student.studentName}</h2>
 
-        <p><b>Roll No:</b> ${student.rollNo}</p>
+<div class="student-card">
 
-        <p><b>Paper Code:</b> ${student.paperCode}</p>
+<h2>${student.studentName}</h2>
 
-        <p><b>Building:</b> ${student.building}</p>
+<hr>
 
-        <div class="room-number">
-            Room No. ${student.roomNo}
-        </div>
+<p><strong>University Roll Number</strong></p>
+<p>${student.rollNo}</p>
 
-        <p><b>Seat:</b> ${student.seatPosition}</p>
+<hr>
 
-        <p><b>Date:</b> ${formattedDate}</p>
+<p><strong>Paper Code</strong></p>
+<p style="font-size:28px;font-weight:bold;color:#002B5C;">
+${student.paperCode}
+</p>
 
-        <p><b>Shift:</b> ${student.shift}</p>
-    `;
+<hr>
+
+<p><strong>Building</strong></p>
+<p>${student.building}</p>
+
+<div class="room-number">
+
+ROOM NO.<br>
+
+${student.roomNo}
+
+</div>
+
+<p><strong>Seat Position</strong></p>
+<p style="font-size:24px;font-weight:bold;">
+${student.seatPosition}
+</p>
+
+<hr>
+
+<p><strong>Examination Date</strong></p>
+<p>${formattedDate}</p>
+
+<hr>
+
+<p><strong>Shift</strong></p>
+<p>${student.shift}</p>
+
+</div>
+
+`;
 
 }
