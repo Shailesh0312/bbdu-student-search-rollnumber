@@ -1,6 +1,6 @@
 let students = [];
 
-fetch("verified_seating_2026_05_20_evening.json")
+fetch("verified_seating_2026_05_15_morning.json")
     .then(response => response.json())
     .then(data => {
 
