@@ -1,30 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BBD University Student Seat Search</title>
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <title>BBD University | Online Student Seat Search</title>
 
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-    <h1>BBD University</h1>
-    <h2>Student Seat Search</h2>
+    <div class="container">
 
-    <input
-        type="text"
-        id="rollNo"
-        placeholder="Enter Roll Number">
+        <img src="images/bbdulogo2.png" alt="BBD University Logo" class="logo">
 
-    <button id="searchBtn">
-        Search
-    </button>
+        <h1>BBD UNIVERSITY</h1>
 
-    <div id="result"></div>
+        <h3>EXAMINATION CELL</h3>
+
+        <h2>ONLINE STUDENT SEAT SEARCH</h2>
+
+        <p class="subtitle">
+            Find your Examination Room using your University Roll Number
+        </p>
+
+        <div class="search-box">
+
+            <label for="rollNo">
+                University Roll Number
+            </label>
+
+            <input
+                type="text"
+                id="rollNo"
+                placeholder="Enter University Roll Number"
+                autocomplete="off">
+
+            <button id="searchBtn">
+                🔍 SEARCH
+            </button>
+
+        </div>
+
+        <div id="result"></div>
+
+        <footer>
+
+            <hr>
+
+            <p>
+                Issued by<br>
+                <strong>Examination Cell</strong><br>
+                BBD University
+            </p>
+
+        </footer>
+
+    </div>
 
     <script src="app.js"></script>
 
 </body>
+
 </html>
